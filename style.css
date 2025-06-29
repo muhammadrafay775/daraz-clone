@@ -1,0 +1,455 @@
+/* Full Screen Loader */
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Spinner */
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid orange;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  height: 100px;
+  width: 100%;
+  background-color: orangered;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.navlogo {
+  background-image: url(https://lzd-img-global.slatic.net/us/domino/3b870cb043c7f8a9741cbf66329e294e.png);
+  height: 85px;
+  width: 300px;
+  background-size: cover;
+}
+
+.navsearch {
+  display: flex;
+  align-items: center;
+}
+
+#input {
+  height: 60px;
+  width: 620px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  border: none;
+  margin: 0;
+}
+
+.sicon {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  background-color: orange;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  line-height: 60px;
+}
+
+.navsearch:hover {
+  border: 5px solid orange;
+  border-radius: 7px;
+}
+
+.cart {
+  background-color: orangered;
+  color: orange;
+  font-size: 3rem;
+}
+
+.main {
+  background-color: lightgrey;
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 100px; /* Prevent footer overlap */
+}
+
+.footbigpicture {
+  background-image: url(https://img.lazcdn.com/us/domino/113e8c82-064b-43f2-ad0d-46b224644bcc_PK-1976-688.jpg_2200x2200q80.jpg_.webp);
+  background-size: cover;
+  height: 450px;
+  width: 100%;
+  margin: 0 auto;
+  background-position: center;
+}
+
+h1 {
+  color: black;
+  font-family: Arial, sans-serif;
+  padding-top: 5px;
+  padding-left: 60px;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.firstparent {
+  max-width: 1100px;
+  background-color: white;
+  margin: 10px auto;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.shopnowpanel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.panel1 {
+  color: orange;
+  font-weight: 900;
+  font-size: 24px;
+  padding: 10px;
+}
+
+.panel2 {
+  padding: 10px 20px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.panel2:hover {
+  background-color: darkorange;
+}
+
+.hr {
+  border-top: 2px solid orange;
+  margin: 20px 0;
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 22%;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  padding: 16px;
+}
+
+.container h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.container p {
+  color: orange;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.loadmorebutton {
+  height: 80px;
+  width: 100%;
+  background-color: lightgrey;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#fh1 {
+  border: 3px solid blue;
+  color: blue;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: larger;
+  border-width: 10px;
+  height: 50px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fcontainer {
+  background-color: lightgrey;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.fflash, .fcategories, .fjustforyou1, .fjustforyou2 {
+  border: 2px solid white;
+  color: black;
+  background-color: lightgrey;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  font-size: 30px;
+  overflow: hidden;
+}
+
+.fjustforyou1, .fjustforyou2 {
+  color: orange;
+}
+
+.finstruction {
+  background-color: lightgrey;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  color: darkblue;
+}
+
+.finstruction1 {
+  display: flex;
+  gap: 60px;
+}
+
+ul {
+  margin-top: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+ul p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+ul li a {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  text-decoration: none;
+  color: darkblue;
+}
+
+.img, .app, .play, .google {
+  background-size: cover;
+  height: 50px;
+  width: 170px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.lastf {
+  background-color: black;
+  color: beige;
+  font-size: 25px;
+  min-height: 100px;
+  width: 100%;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+/* --------- MOBILE DEVICES (max 640px) --------- */
+@media (max-width: 640px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navlogo {
+    width: 200px;
+    height: auto;
+    background-size: contain;
+  }
+
+  .navsearch {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  #input {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .sicon {
+    width: 90%;
+  }
+
+  .cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .footbigpicture {
+    width: 100%;
+    height: 200px;
+    background-position: center;
+  }
+
+  h1 {
+    font-size: 30px;
+    padding-left: 20px;
+  }
+
+  .firstparent {
+    padding: 10px;
+  }
+
+  .loadmorebutton #fh1 {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .fcontainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .fflash,
+  .fcategories,
+  .fjustforyou1,
+  .fjustforyou2 {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .finstruction {
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .img,
+  .app,
+  .play,
+  .google {
+    margin: 10px auto;
+  }
+
+  .lastf {
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+    height: auto;
+  }
+}
+/* --------- TABLETS (max 768px) --------- */
+@media (max-width: 768px) {
+  .card {
+    width: 47%;
+  }
+
+  .navsearch {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #input {
+    width: 300px;
+  }
+
+  .sicon {
+    width: 60px;
+  }
+
+  .footbigpicture {
+    height: 300px;
+  }
+}
+/* --------- SMALL DESKTOPS (max 1024px) --------- */
+@media (max-width: 1024px) {
+  .card {
+    width: 31%;
+  }
+
+  .footbigpicture {
+    width: 95%;
+  }
+
+  .firstparent {
+    max-width: 90%;
+  }
+}
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+  .navsearch {
+    flex-direction: column;
+  }
+}
