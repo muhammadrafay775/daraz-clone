@@ -44,6 +44,49 @@
   align-items: center;
   padding-top: 10px;
 }
+/* ✅ Mobile Responsive - Max width 768px */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .navlogo {
+    width: 200px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .navsearch {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+
+  #input {
+    width: 70%;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+
+  .sicon {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 1.2rem;
+  }
+
+  .navcart {
+    text-align: center;
+  }
+
+  .cart {
+    font-size: 2rem;
+  }
+}
 
 .navlogo {
   background-image: url(https://lzd-img-global.slatic.net/us/domino/3b870cb043c7f8a9741cbf66329e294e.png);
